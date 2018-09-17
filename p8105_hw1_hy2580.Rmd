@@ -1,6 +1,6 @@
 ---
 title: "p8105_hw1_hy2580"
-author: "haokun yuan"
+author: "Haokun Yuan"
 date: "9/17/2018"
 output: html_document
 ---
@@ -28,3 +28,18 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Problem 1
+
+Create data frame:
+
+```{r}
+library(tidyverse)
+problem1_df = tibble(
+  vec_numeric = runif(10,0,5),
+  vec_logical = c(TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE),
+  vec_char = c("It", "is", "hard", "to", "think", "of", "so", "many", "different", "characters"),
+  vec_factor = factor(c("female", "female", "female","female", "female", "male", "male", "male", "male", "male"))
+)
+```
+
