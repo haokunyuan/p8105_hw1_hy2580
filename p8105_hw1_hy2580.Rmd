@@ -5,30 +5,10 @@ date: "9/17/2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## Problem 1
 
@@ -52,4 +32,23 @@ mean_logical = mean(vec_logical)
 mean_char = mean(vec_char)
 mean_factor = mean(vec_factor)
 ```
+The mean of vec_numeric and vec_logical can be taken, while the mean of vec_char and vec_factor cannot.
+
+We can only calculate the mean of variables with numeric values, logical variables can calculated since they can be interpret as 1s and 0s,
+
+Convert variables:
+
+```{r, eval = FALSE}
+num_logical = as.numeric(vec_logical)
+num_char = as.numeric(vec_char)
+num_factor = as.numeric(vec_factor)
+```
+
+```{r}
+as.factor(vec_char)
+as.numeric(as.factor(vec_char))
+as.numeric(vec_factor)
+```
+
+
 
