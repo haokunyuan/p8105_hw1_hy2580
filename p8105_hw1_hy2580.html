@@ -137,20 +137,7 @@ vec_logical = c(TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE)
 vec_char = c(&quot;It&quot;, &quot;is&quot;, &quot;hard&quot;, &quot;to&quot;, &quot;think&quot;, &quot;of&quot;, &quot;so&quot;, &quot;many&quot;, &quot;different&quot;, &quot;characters&quot;)
 vec_factor = factor(c(&quot;female&quot;, &quot;female&quot;, &quot;female&quot;,&quot;female&quot;, &quot;female&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;, &quot;male&quot;))
 
-tibble(vec_numeric, vec_logical, vec_char, vec_factor)</code></pre>
-<pre><code>## # A tibble: 10 x 4
-##    vec_numeric vec_logical vec_char   vec_factor
-##          &lt;dbl&gt; &lt;lgl&gt;       &lt;chr&gt;      &lt;fct&gt;     
-##  1       1.33  TRUE        It         female    
-##  2       1.86  TRUE        is         female    
-##  3       2.86  TRUE        hard       female    
-##  4       4.54  TRUE        to         female    
-##  5       1.01  TRUE        think      female    
-##  6       4.49  FALSE       of         male      
-##  7       4.72  FALSE       so         male      
-##  8       3.30  FALSE       many       male      
-##  9       3.15  FALSE       different  male      
-## 10       0.309 FALSE       characters male</code></pre>
+p1_tibble = tibble(vec_numeric, vec_logical, vec_char, vec_factor)</code></pre>
 <p>Take mean of the variable:</p>
 <pre class="r"><code>mean_numeric = mean(vec_numeric)
 mean_logical = mean(vec_logical)
@@ -174,6 +161,19 @@ num_factor = as.numeric(vec_factor)</code></pre>
 <pre><code>##  [1]  5  4  3 10  9  7  8  6  2  1</code></pre>
 <pre class="r"><code>as.numeric(vec_factor)</code></pre>
 <pre><code>##  [1] 1 1 1 1 1 2 2 2 2 2</code></pre>
+</div>
+<div id="problem-2" class="section level2">
+<h2>Problem 2</h2>
+<p>Create data frame:</p>
+<pre class="r"><code>set.seed(1)
+x = rnorm(1000)
+y = rnorm(1000)
+vec_logical2 = x + y &gt; 0
+vec_numeric2 = as.numeric(vec_logical2)
+vec_factor2 = as.factor(vec_logical2)
+
+p2_tibble = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)</code></pre>
+<p>The size of the dataset: <code>dim(p2_tibble)</code> The mean of x: “mean(x)”</p>
 </div>
 
 
