@@ -21,7 +21,7 @@ vec_logical = c(TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE)
 vec_char = c("It", "is", "hard", "to", "think", "of", "so", "many", "different", "characters")
 vec_factor = factor(c("female", "female", "female","female", "female", "male", "male", "male", "male", "male"))
 
-p1_tibble = tibble(vec_numeric, vec_logical, vec_char, vec_factor)
+p1_df = tibble(vec_numeric, vec_logical, vec_char, vec_factor)
 ```
 
 Take mean of the variable:
@@ -62,8 +62,14 @@ vec_logical2 = x + y > 0
 vec_numeric2 = as.numeric(vec_logical2)
 vec_factor2 = as.factor(vec_logical2)
 
-p2_tibble = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)
+p2_df = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)
 ```
 
-The size of the dataset: `dim(p2_tibble)`
-The mean of x: "mean(x)"
+Make scatterplot of y vs x:
+
+```{r}
+ggplot(p2_df, aes(x = x, y = y, color = vec_logical2)) +geom_point()
+ggplot(p2_df, aes(x = x, y = y, color = vec_numeric2)) +geom_point()
+ggplot(p2_df, aes(x = x, y = y, color = vec_factor2)) +geom_point()
+
+
