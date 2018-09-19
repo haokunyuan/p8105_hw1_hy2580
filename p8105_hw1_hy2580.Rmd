@@ -67,9 +67,18 @@ p2_df = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)
 
 Make scatterplot of y vs x:
 
+Colored using logical variable
+
 ```{r}
 ggplot(p2_df, aes(x = x, y = y, color = vec_logical2)) +geom_point()
+
+ggsave("p8105_hw1_plot_hy2580.pdf")
+```
+
+Colored using numeric variable
+
+```{r}
 ggplot(p2_df, aes(x = x, y = y, color = vec_numeric2)) +geom_point()
-ggplot(p2_df, aes(x = x, y = y, color = vec_factor2)) +geom_point()
+```
 
 
