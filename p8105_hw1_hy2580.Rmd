@@ -81,4 +81,10 @@ Colored using numeric variable
 ggplot(p2_df, aes(x = x, y = y, color = vec_numeric2)) +geom_point()
 ```
 
+Colored using factor variable
+
+```{r}
+ggplot(p2_df, aes(x = x, y = y, color = vec_factor2)) +geom_point()
+```
+
 
