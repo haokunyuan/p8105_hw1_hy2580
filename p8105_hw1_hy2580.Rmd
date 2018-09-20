@@ -65,6 +65,16 @@ vec_factor2 = as.factor(vec_logical2)
 p2_df = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)
 ```
 
+Size of the dataset = `r dim(p2_df)`
+
+Mean of x = `r mean(x)`
+
+Median of x = `r median(x)`
+
+The proportion of the cases for which the logical vector is TRUE = `r sum(vec_logical2)/length(vec_logical2)`
+
+
+
 Make scatterplot of y vs x:
 
 Colored using logical variable

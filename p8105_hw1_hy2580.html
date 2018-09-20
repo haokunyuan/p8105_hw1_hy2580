@@ -173,6 +173,10 @@ vec_numeric2 = as.numeric(vec_logical2)
 vec_factor2 = as.factor(vec_logical2)
 
 p2_df = tibble(x, y, vec_logical2, vec_numeric2, vec_factor2)</code></pre>
+<p>Size of the dataset = 1000, 5</p>
+<p>Mean of x = -0.0116481</p>
+<p>Median of x = -0.0353242</p>
+<p>The proportion of the cases for which the logical vector is TRUE = 0.49</p>
 <p>Make scatterplot of y vs x:</p>
 <p>Colored using logical variable</p>
 <pre class="r"><code>ggplot(p2_df, aes(x = x, y = y, color = vec_logical2)) +geom_point()</code></pre>
